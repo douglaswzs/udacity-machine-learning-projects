@@ -59,6 +59,7 @@ The proposed plan was to merge the portfolio of offer, the profile and transcrip
 
 We will consider a successful offer as follows. It must satisfy two conditions, offers received must be viewed, and the transaction must occur during the duration of the offer. If an offer were received but not viewed, it would mean that the customer would have made the purchase regardless of the offer. 
 
+![flowchart](images/12flowchart.JPG)
 ```sequence
 Offer Received -> Offer Viewed
 ```
