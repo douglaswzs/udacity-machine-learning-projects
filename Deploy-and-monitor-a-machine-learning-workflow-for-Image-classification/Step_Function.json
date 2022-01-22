@@ -1,0 +1,36 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "Serialize Image",
+  "States": {
+    "Serialize Image": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload.body",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1:610856797801:function:serializeImageData:$LATEST"
+      },
+      "Next": "Classifier"
+    },
+    "Classifier": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload.body",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1:610856797801:function:classifier:$LATEST"
+      },
+      "Next": "Inference"
+    },
+    "Inference": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1:610856797801:function:inferences:$LATEST"
+      },
+      "End": true
+    }
+  }
+}
