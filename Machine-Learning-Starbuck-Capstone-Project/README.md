@@ -77,8 +77,6 @@ We will also determine the `Feature Importance` to estimate feature importance t
 
 Beside looking into if an offer is successful, we will also be looking into the amount of profit that each offer brings in as another metric that we can investigate. 
 
-![implementationflowchart](images/implementation%20flow%20diagram.JPG)
-
 # Datasets and Inputs <a name="DatasetsAndInputs"></a>
 The dataset used in this project contains data from the Starbucks reward mobile app. It contains the event of receiving offers, opening offers, and making purchases. In this simplified dataset. Only the type of offer and the transaction and the purchase amount are available in this dataset but not the actual product contributed to the purchase. 
 
@@ -136,6 +134,7 @@ The planned workflow for this project is as follows.
 1. Feature Importance
 1. Discussion / Conclusion
 
+![implementationflowchart](images/implementation%20flow%20diagram.JPG)
 
 # References  <a name="References"></a>
 1. Starbucks Industry AI Case Study (Domain Background) https://info.formation.ai/rs/435-BMS-371/images/Starbucks_CaseStudy_final.pdf  
