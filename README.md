@@ -14,7 +14,8 @@ https://github.com/douglaswzs/udacity-machine-learning-projects/tree/main/Image-
 1. `nd009t-c4-operationalizing-machine-learning-on-sagemaker` Operationalizing Machine Learning on SageMaker
 https://github.com/douglaswzs/udacity-machine-learning-projects/tree/main/Operationalizing-Machine-Learning-on-SageMaker
 
-1. Capstone Project - Starbuck Offer Predictions
+1. Machine Learning Capstone Project - Starbuck Offer Predictions
+https://github.com/douglaswzs/udacity-machine-learning-projects/tree/main/Machine-Learning-Starbuck-Capstone-Project
 
 # Course Materials
 1. nd009t-c1-intro-to-ml  https://github.com/udacity/nd009t-c1-intro-to-ml-templates
