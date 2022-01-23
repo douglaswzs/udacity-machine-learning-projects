@@ -60,6 +60,7 @@ The proposed plan was to merge the portfolio of offer, the profile and transcrip
 We will consider a successful offer as follows. It must satisfy two conditions, offers received must be viewed, and the transaction must occur during the duration of the offer. If an offer were received but not viewed, it would mean that the customer would have made the purchase regardless of the offer. 
 
 ![flowchart](images/12flowchart.JPG)
+
 ```sequence
 Offer Received -> Offer Viewed
 ```
@@ -67,7 +68,8 @@ Offer Received -> Offer Viewed
 ```sequence
 Transaction Occurs -> Offer Completed
 ```
-We will be utilizing the Amazon SageMaker platform for its integrated development environments, creating a Sagemaker notebook instance. It is a machine learning compute instance running the Jupyter Notebook App. We will use this environment to do our data processing, then we will upload our training data to Amazon S3 Cloud Object Storage.  
+We will be utilizing the Amazon SageMaker platform for its integrated development environments, creating a Sagemaker notebook instance. It is a machine learning compute instance running the Jupyter Notebook App. We will use this environment to do our data processing, then we will upload our training data to Amazon S3 Cloud Object Storage. It will also allow us to deploy our trained model as an endpoint which can be called by a lambda function to be consumed by applications. 
+
 
 As we have a labeled dataset, we will be using supervised learning algorithms to predict if an offer is going to be successful. We will be exploring and comparing three algorithms, scikit-learn library logistic regression, scikit-learn library random forest, and XGBoost algorithm provided by Amazon SageMaker. Logistic regression is a statistical method for predicting binary classes (e). Random forests classifier is an ensemble of decision trees trained on randomly selected data samples, then the best prediction from each tree and select the best solution by voting(f). XGBoost is an efficient implementation of gradient boosting. Gradient boosting is an algorithm that combines many weak learning models together to create a strong predictive model (g).   
 
@@ -75,9 +77,7 @@ We will also determine the `Feature Importance` to estimate feature importance t
 
 Beside looking into if an offer is successful, we will also be looking into the amount of profit that each offer brings in as another metric that we can investigate. 
 
-The problem that we have is a Supervised learning is a type of ML where the model is provided with labeled training data, and how it is "quantifiable, measurable, and replicable".
-It is measure by the accuracy metric and F1 score.
-We ensured this is replicable by using random
+![implementationflowchart](images/implementation%20flow%20diagram.JPG)
 
 # Datasets and Inputs <a name="DatasetsAndInputs"></a>
 The dataset used in this project contains data from the Starbucks reward mobile app. It contains the event of receiving offers, opening offers, and making purchases. In this simplified dataset. Only the type of offer and the transaction and the purchase amount are available in this dataset but not the actual product contributed to the purchase. 
